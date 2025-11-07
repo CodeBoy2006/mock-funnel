@@ -7,13 +7,13 @@
 ## 功能
 
 - 四条内/外网 + 统一/正方 线路一体化模拟：
-  - `outer-unified`、`inner-unified`、`outer-zf`、`inner-zf`
+    - `outer-unified`、`inner-unified`、`outer-zf`、`inner-zf`
 - 可配置：基础延迟、抖动、错误率、超时率、超时时长、夜间屏蔽窗口、启用/禁用
 - 公开 Mock API（无鉴权）：
-  - `/{line}/api/ping`、`/{line}/api/schedule`、`/{line}/api/grades`
+    - `/{line}/api/ping`、`/{line}/api/schedule`、`/{line}/api/grades`
 - 实时可视化（内置 Web 面板）：
-  - 最近 60 秒每秒 RPS 和平均延迟曲线
-  - 按线路的计数（成功/错误/超时）与 P50/P95/P99（在 `/metrics/snapshot` 返回）
+    - 最近 60 秒每秒 RPS 和平均延迟曲线
+    - 按线路的计数（成功/错误/超时）与 P50/P95/P99（在 `/metrics/snapshot` 返回）
 - HTTP 响应头包含 `X-Mock-Line`、`X-Mock-Latency-Ms`，便于在 WeJH-Go 中打点/排查。
 
 ## 编译与运行
@@ -46,10 +46,10 @@ ADDR=:9090 ./mock-funnel
 
 - 登录方式（`oauth` / `zf`）作为参数传给 mock 即可（mock 会忽略并返回固定结构），真正的决策逻辑仍在 WeJH-Go。
 - 你可以通过调整面板参数来模拟：
-  - 夜间关停（内网）
-  - 高错误率/超时率
-  - 高延迟/抖动
-  - 动态启停线路
+    - 夜间关停（内网）
+    - 高错误率/超时率
+    - 高延迟/抖动
+    - 动态启停线路
 
 ## API 说明
 
